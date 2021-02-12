@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/health" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+
+            <EditText
+                android:id="@+id/editTextEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:hint="@string/email"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="15dp"
+                android:textColorHint="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/SignUpEditTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:hint="@string/password"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+
+                android:inputType="textPassword"
+                android:paddingBottom="15dp"
+                android:textColorHint="@color/colorAccent" />
+            <EditText
+                android:id="@+id/SignUpEditTextConformPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:hint="@string/conform_password"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+
+                android:inputType="textPassword"
+                android:paddingBottom="15dp"
+                android:textColorHint="@color/colorAccent" />
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"
+                android:background="@drawable/rounded_button_transpertent"
+                android:text="@string/sign_up"
+                android:textAllCaps="false"
+                android:onClick="onClickSignUpButton"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/textViewSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/already_have_an_account_login"
+                android:textAlignment="center"
+                android:onClick="onClickLogin"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorAccent" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressbarSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</LinearLayout>
